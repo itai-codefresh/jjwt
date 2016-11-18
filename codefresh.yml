@@ -15,14 +15,14 @@ steps:
     commands:
         - echo $(date)
         - env
-        - ls .
+        - ls ../
         - echo "WHAT IS GOING ON!"
-        - echo foo > foo.txt
+        - echo foo > ../foo.txt
         - echo After creation of file
-        - ls .
+        - ls ../
         - echo $PWD
   validateFoo:
      image: ${{build_jjwt}}
      working-directory: ${{initial-clone}}
      commands:
-         - ls
+         - ls ../
